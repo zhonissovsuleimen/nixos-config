@@ -1,5 +1,3 @@
-# /etc/nixos/graphics.nix
-
 { config, pkgs, ... }:
 
 {
