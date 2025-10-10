@@ -31,6 +31,13 @@ in
 
       edgeBarrier = 0;
     };
+
+
+      panels = [
+        {
+          floating = false;
+	  opacity = "opaque";
+	}
+      ];
   };
 }
-
