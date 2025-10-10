@@ -48,5 +48,14 @@ in
 	];
       }
     ];
+
+    spectacle.shortcuts = {
+      captureActiveWindow = "Meta+Print";
+      captureCurrentMonitor = "Print";
+      captureEntireDesktop = null;
+      captureRectangularRegion = "Meta+Shift+S";
+      captureWindowUnderCursor = null;
+      launch = null;
+    };
   };
 }
