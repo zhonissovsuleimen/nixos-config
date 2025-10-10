@@ -84,6 +84,8 @@ in
       spectacle."GuiConfig"."captureOnClick" = true;
       spectacle."GuiConfig"."quitAfterSaveCopyExport" = true;
       spectacle."ImageSave"."imageCompressionQuality" = 100;
+
+      krunnerrc."General"."activateWhenTypingOnDesktop" = false;
     };
 
   };
