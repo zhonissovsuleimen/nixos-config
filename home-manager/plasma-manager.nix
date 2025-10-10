@@ -37,6 +37,7 @@ in
       };
 
       edgeBarrier = 0;
+      cornerBarrier = false;
     };
 
     panels = [
@@ -69,6 +70,20 @@ in
     input.keyboard = {
       layouts = [{layout="us,ru";}];
       numlockOnStartup = "on";
+    };
+
+
+    configFile = {
+      kwinrc."KDE"."AnimationDurationFactor" = 0;
+      kwinrc."Effect-overview"."BorderActivate" = "";
+      kwinrc."TabBox"."DelayTime" = 0;
+      kwinrc."TabBox"."ShowDesktopMode" = true;
+
+      spectacle."General"."useReleaseToCapture" = true;
+      spectacle."General"."clipboardGroup" = "PostScreenshotCopyImage";
+      spectacle."GuiConfig"."captureOnClick" = true;
+      spectacle."GuiConfig"."quitAfterSaveCopyExport" = true;
+      spectacle."ImageSave"."imageCompressionQuality" = 100;
     };
 
   };
