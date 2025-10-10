@@ -11,9 +11,16 @@ in
   programs.plasma = {
     enable = true;
 
+    #windows.allowWindowsToRememberPositions = false;
 
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
+      tooltipDelay = 500;
+    };
+
+    session = {
+      sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+      general.askForConfirmationOnLogout = false;
     };
 
     kwin = {
