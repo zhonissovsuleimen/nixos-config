@@ -15,6 +15,22 @@ in
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
     };
+
+    kwin = {
+      effects = {
+        desktopSwitching.animation = "off";
+	minimization.animation = "off";
+	windowOpenClose.animation = "off";
+
+	wobblyWindows.enable = false;
+	shakeCursor.enable = false;
+	slideBack.enable = false;
+	snapHelper.enable = false;
+	translucency.enable = false;
+      };
+
+      edgeBarrier = 0;
+    };
   };
 }
 
