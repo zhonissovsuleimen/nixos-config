@@ -61,15 +61,23 @@ in
   home-manager.users.${username} = { pkgs, ... } : {
     home.packages = with pkgs; [
       firefox
-      neovim
       git
       lshw
     ];
 
 
+    programs.neovim = {
+      enable = true;
+
+      extraPackages = [ pkgs.wl-clipboard ];
+      extraConfig = ''
+        set clipboard+=unnamedplus
+      '';
+    };
 
     home.stateVersion = "25.05";
   };
+
 
   nixpkgs.config.allowUnfree = true;
 
