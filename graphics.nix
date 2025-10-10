@@ -3,7 +3,7 @@
 {
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  boot.kernelParams = [ "module_blacklist=i915" ];
+  #boot.kernelParams = [ "module_blacklist=i915" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
