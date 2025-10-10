@@ -32,7 +32,6 @@ in
       edgeBarrier = 0;
     };
 
-
     panels = [
       {
         floating = false;
@@ -49,6 +48,8 @@ in
       }
     ];
 
+    shortcuts."KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Alt+Shift";
+
     spectacle.shortcuts = {
       captureActiveWindow = "Meta+Print";
       captureCurrentMonitor = "Print";
@@ -57,5 +58,11 @@ in
       captureWindowUnderCursor = null;
       launch = null;
     };
+
+    input.keyboard = {
+      layouts = [{layout="us,ru";}];
+      numlockOnStartup = "on";
+    };
+
   };
 }
