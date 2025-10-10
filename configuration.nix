@@ -59,23 +59,9 @@ in
   };
 
   home-manager.users.${username} = { pkgs, ... } : {
-    home.packages = with pkgs; [
-      firefox
-      git
-      lshw
+    imports = [
+      ./home-manager/index.nix
     ];
-
-
-    programs.neovim = {
-      enable = true;
-
-      extraPackages = [ pkgs.wl-clipboard ];
-      extraConfig = ''
-        set clipboard+=unnamedplus
-      '';
-    };
-
-    home.stateVersion = "25.05";
   };
 
 
