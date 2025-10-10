@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 let 
+  username = "sulya";
   hm = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
 in
 {
@@ -21,7 +22,7 @@ in
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "${username}-linux"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Oral";
@@ -66,13 +67,12 @@ in
     pulse.enable = true;
   };
 
-  users.users.sulya = {
+  users.users.${username}= {
     isNormalUser = true;
-    description = "sulya";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  home-manager.users.sulya = { pkgs, ... } : {
+  home-manager.users.${username} = { pkgs, ... } : {
     home.packages = with pkgs; [
       firefox
       neovim
