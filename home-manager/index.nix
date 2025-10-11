@@ -4,6 +4,8 @@
   home.packages = with pkgs; [
     firefox
     git
+    telegram-desktop
+    vesktop
   ];
 
   imports = [
