@@ -20,7 +20,7 @@
       nvidiaBusId = "PCI:1:0:0";
     };
 
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }
 
