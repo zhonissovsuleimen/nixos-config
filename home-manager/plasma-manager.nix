@@ -2,6 +2,7 @@
 
 let
   pm = builtins.fetchTarball https://github.com/nix-community/plasma-manager/archive/trunk.tar.gz;
+  apps = "~/.nix-profile/share/applications";
 in
 {
   imports = [
@@ -26,35 +27,31 @@ in
     kwin = {
       effects = {
         desktopSwitching.animation = "off";
-	minimization.animation = "off";
-	windowOpenClose.animation = "off";
+        minimization.animation = "off";
+        windowOpenClose.animation = "off";
 
-	wobblyWindows.enable = false;
-	shakeCursor.enable = false;
-	slideBack.enable = false;
-	snapHelper.enable = false;
-	translucency.enable = false;
+        wobblyWindows.enable = false;
+        shakeCursor.enable = false;
+        slideBack.enable = false;
+        snapHelper.enable = false;
+        translucency.enable = false;
       };
 
       edgeBarrier = 0;
       cornerBarrier = false;
     };
 
-    panels = [
-      {
-        floating = false;
-	opacity = "opaque";
-	widgets = [
-	  "org.kde.plasma.kickoff"
-	  #"org.kde.plasma.pager"
-	  "org.kde.plasma.icontasks"
-	  "org.kde.plasma.marginsseparator"
-	  "org.kde.plasma.systemtray"
-	  "org.kde.plasma.digitalclock"
-	  #"org.kde.plasma.showdesktop"
-	];
-      }
-    ];
+    panels = [{
+      floating = false;
+      opacity = "opaque";
+      widgets = [
+        "org.kde.plasma.kickoff"
+        "org.kde.plasma.icontasks"
+        "org.kde.plasma.marginsseparator"
+        "org.kde.plasma.systemtray"
+        "org.kde.plasma.digitalclock"
+      ];
+    }];
 
     shortcuts."KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Alt+Shift";
 
@@ -68,7 +65,9 @@ in
     };
 
     input.keyboard = {
-      layouts = [{layout="us,ru";}];
+      layouts = [{
+        layout="us,ru";
+      }];
       numlockOnStartup = "on";
     };
 
@@ -85,7 +84,6 @@ in
       scrollSpeed = 1;
     }];
 
-
     configFile = {
       kwinrc."KDE"."AnimationDurationFactor" = 0;
       kwinrc."Effect-overview"."BorderActivate" = "";
@@ -99,6 +97,7 @@ in
       spectacle."ImageSave"."imageCompressionQuality" = 100;
 
       krunnerrc."General"."activateWhenTypingOnDesktop" = false;
+      krunnerrc."XwayLand"."Scale" = 1;
       krunnerrc."Plugins"."browserhistoryEnabled" = false;
       krunnerrc."Plugins"."browsertabsEnabled" = false;
       krunnerrc."Plugins"."calculatorEnabled" = false;
@@ -119,6 +118,8 @@ in
       krunnerrc."Plugins"."org.kde.datetimeEnabled" = false;
       krunnerrc."Plugins"."unitconverterEnabled" = false;
       krunnerrc."Plugins"."windowsEnabled" = false;
+
+      plasmarc."OSD".kbdLayoutChangedEnabled = false;
     };
 
   };
