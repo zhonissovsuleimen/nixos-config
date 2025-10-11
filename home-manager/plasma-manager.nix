@@ -46,7 +46,14 @@ in
       opacity = "opaque";
       widgets = [
         "org.kde.plasma.kickoff"
-        "org.kde.plasma.icontasks"
+        {
+          iconTasks = {
+            launchers = [
+              "applications:firefox.desktop"
+              "applications:vesktop.desktop"
+            ];
+          };
+        }
         "org.kde.plasma.marginsseparator"
         "org.kde.plasma.systemtray"
         "org.kde.plasma.digitalclock"
