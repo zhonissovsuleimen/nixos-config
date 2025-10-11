@@ -58,6 +58,7 @@ in
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  home-manager.useGlobalPkgs = true;
   home-manager.users.${username} = { pkgs, ... } : {
     imports = [
       ./home-manager/index.nix
@@ -68,9 +69,10 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-
+    steam
+    lshw
+    evtest
   ];
-
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

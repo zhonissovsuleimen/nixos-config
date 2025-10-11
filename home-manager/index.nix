@@ -4,9 +4,7 @@
   home.packages = with pkgs; [
     firefox
     git
-    lshw
   ];
-
 
   imports = [
     ./neovim.nix
