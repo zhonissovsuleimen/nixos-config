@@ -5,6 +5,10 @@
     enable = true;
 
     extraPackages = [ pkgs.wl-clipboard ];
+    plugins = with pkgs.vimPlugins; [
+      vim-visual-multi
+    ];
+
     extraConfig = ''
       set number
       set relativenumber
