@@ -2,8 +2,7 @@
 
 {
   programs.plasma.configFile = {
-    krunnerrc."General"."activateWhenTypingOnDesktop" = false;
-    krunnerrc."XwayLand"."Scale" = 1;
+    krunnerrc."General"."ActivateWhenTypingOnDesktop" = false;
     krunnerrc."Plugins"."browserhistoryEnabled" = false;
     krunnerrc."Plugins"."browsertabsEnabled" = false;
     krunnerrc."Plugins"."calculatorEnabled" = false;
