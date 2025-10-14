@@ -10,7 +10,7 @@
 
   imports = [
     ./neovim.nix
-    ./plasma-manager.nix
+    ./plasma
   ];
 
   home.stateVersion = "25.05";

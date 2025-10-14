@@ -1,15 +1,10 @@
-{ config, pkgs, ... }:
+{ pkgs, config, lib, inputs, ... }:
 
-let 
-  username = "sulya";
-  hm = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
-in
 {
   imports =
     [
       ./hardware-configuration.nix
       ./graphics.nix
-      (import "${hm}/nixos")
     ];
 
   # Bootloader.
@@ -20,7 +15,7 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages;
 
-  networking.hostName = "${username}-linux"; # Define your hostname.
+  networking.hostName = "sulya-linux";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Oral";
@@ -43,7 +38,6 @@ in
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -53,20 +47,10 @@ in
     pulse.enable = true;
   };
 
-  users.users.${username}= {
+  users.users.sulya = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
   };
-
-  home-manager.useGlobalPkgs = true;
-  home-manager.users.${username} = { pkgs, ... } : {
-    imports = [
-      ./home-manager/index.nix
-    ];
-  };
-
-
-  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     steam
@@ -74,10 +58,6 @@ in
     evtest
   ];
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-
-
+  nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
 }
