@@ -13,6 +13,11 @@
             "applications:firefox.desktop"
             "applications:vesktop.desktop"
           ];
+
+          behavior.wheel = {
+            switchBetweenTasks = false;
+            ignoreMinimizedTasks = false;
+          };
         };
       }
       "org.kde.plasma.marginsseparator"
