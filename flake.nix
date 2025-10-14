@@ -12,14 +12,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    maccel.url = "github:Gnarus-G/maccel";
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, ... } @inputs:
   {
     nixosConfigurations.sulya-linux = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./system
+        ./nixos
 
         home-manager.nixosModules.home-manager
         {
@@ -28,6 +29,7 @@
           home-manager.users.sulya = import ./home;
           home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
+        maccel.nixosModules.default
       ];
     };
   };

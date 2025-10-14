@@ -1,12 +1,6 @@
-{ pkgs, config, lib, inputs, ... }:
+{ pkgs, config, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./graphics.nix
-    ];
-
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.efiSupport = true;
@@ -50,16 +44,6 @@
   users.users.sulya = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
-  };
-
-  environment.systemPackages = with pkgs; [
-    lshw
-    evtest
-  ];
-
-  programs.steam = {
-    enable = true;
-    extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
 
   nixpkgs.config.allowUnfree = true;
