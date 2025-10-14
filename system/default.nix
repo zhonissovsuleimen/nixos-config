@@ -53,10 +53,14 @@
   };
 
   environment.systemPackages = with pkgs; [
-    steam
     lshw
     evtest
   ];
+
+  programs.steam = {
+    enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
+  };
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
