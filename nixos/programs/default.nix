@@ -9,4 +9,6 @@
     enable = true;
     extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
+
+  programs.noisetorch.enable = true;
 }
