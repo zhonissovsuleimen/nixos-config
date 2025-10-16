@@ -1,16 +1,15 @@
 { config, ... }:
 {
+  hardware.cpu.intel.updateMicrocode = true;
+
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  boot.kernelParams = [ "module_blacklist=i915" ];
-
   hardware.nvidia = {
     modesetting.enable = true;
 
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    dynamicBoost.enable = true;
-
+    dynamicBoost.enable = true; # might not work first time (need to comment out, nixos-rebuild, uncomment and rebuild again)
 
     open = false;
     nvidiaSettings = true;
@@ -21,7 +20,7 @@
       nvidiaBusId = "PCI:1:0:0";
     };
 
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
   hardware.maccel = {
