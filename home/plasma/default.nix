@@ -26,5 +26,6 @@
     ./spectacle.nix
     ./input.nix
     ./krunner.nix
+    ./powerdevil.nix
   ];
 }
