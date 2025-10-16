@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     lshw
     evtest
+    nvtopPackages.nvidia
   ];
 
   programs.steam = {
