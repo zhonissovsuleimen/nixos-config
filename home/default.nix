@@ -5,12 +5,12 @@
     firefox
     git
     telegram-desktop
-    vesktop
   ];
 
   imports = [
-    ./neovim.nix
     ./plasma
+    ./vesktop
+    ./neovim.nix
   ];
 
   home.stateVersion = "25.05";
