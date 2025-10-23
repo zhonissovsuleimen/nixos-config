@@ -1,12 +1,16 @@
 { pkgs, config, ... }:
 
 {
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      efiSupport = true;
+      useOSProber = true;
+      device = "nodev";
+    };
+    efi.canTouchEfiVariables = true;
+    timeout = 1;
+  };
   boot.kernelPackages = pkgs.linuxPackages;
 
   networking.hostName = "sulya-linux";
