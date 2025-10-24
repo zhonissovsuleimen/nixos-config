@@ -38,5 +38,6 @@
     ./input.nix
     ./krunner.nix
     ./powerdevil.nix
+    ./kdeglobals.nix
   ];
 }

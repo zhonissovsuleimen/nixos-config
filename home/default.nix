@@ -5,6 +5,7 @@
     firefox
     git
     telegram-desktop
+    alacritty
   ];
 
   programs.bash = {

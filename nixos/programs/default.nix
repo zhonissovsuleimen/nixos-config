@@ -10,6 +10,7 @@
     kate
     okular
     elisa
+    konsole
   ];
 
   programs.steam = {
