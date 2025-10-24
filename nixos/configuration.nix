@@ -1,9 +1,6 @@
 { pkgs, config, ... }:
 
 {
-  networking.hostName = "sulya-linux";
-  networking.networkmanager.enable = true;
-
   time.timeZone = "Asia/Oral";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -35,7 +32,7 @@
 
   users.users.sulya = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" ];
   };
 
   nixpkgs.config.allowUnfree = true;
