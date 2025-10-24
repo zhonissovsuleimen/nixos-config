@@ -21,5 +21,20 @@
       naturalScroll = false;
       scrollSpeed = 1;
     }];
+
+    input.touchpads = [{
+      enable = true;
+      name = "GXTP5100:00 27C6:01E0 Touchpad";
+      vendorId = "27C6";
+      productId = "01E0";
+      disableWhileTyping = false;
+      leftHanded = false;
+      middleButtonEmulation = false;
+      pointerSpeed = 0.75;
+      naturalScroll = true;
+      tapToClick = true;
+      tapAndDrag = true;
+      accelerationProfile = "none";
+    }];
   };
 }
