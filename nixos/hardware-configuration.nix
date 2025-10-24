@@ -16,7 +16,7 @@
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/2C00-AC10";
     fsType = "vfat";
-    options = [ "noauto" "fmask=0077" "dmask=0077" ];
+    options = [ "fmask=0077" "dmask=0077" ];
     noCheck = true;
   };
 
