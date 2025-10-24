@@ -13,19 +13,6 @@
       general.askForConfirmationOnLogout = false;
     };
 
-    shortcuts."KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Alt+Shift";
-    shortcuts."plasmashell" = {
-      "activate application launcher" = "Meta";
-      "clipboard_action" = "none";
-      "cycle-panels" = "none";
-      "manage activities" = "none";
-      "show dashboard" = "none";
-      "show-on-mouse-pos" = "none";
-      "stop current activity" = "none";
-      "switch to next activity" = "none";
-      "switch to previous activity" = "none";
-    };
-
     configFile = {
       plasmarc."OSD".kbdLayoutChangedEnabled = false;
     };
@@ -39,5 +26,6 @@
     ./krunner.nix
     ./powerdevil.nix
     ./kdeglobals.nix
+    ./shortcuts.nix
   ];
 }

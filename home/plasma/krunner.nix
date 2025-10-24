@@ -2,11 +2,6 @@
 
 {
   programs.plasma = {
-    krunner.shortcuts = {
-      launch = "none";
-      runCommandOnClipboard = "none";
-    };
-
     configFile = {
       krunnerrc."General"."ActivateWhenTypingOnDesktop" = false;
       krunnerrc."Plugins"."browserhistoryEnabled" = false;
