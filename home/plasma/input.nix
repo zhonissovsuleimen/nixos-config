@@ -31,6 +31,7 @@
       leftHanded = false;
       middleButtonEmulation = false;
       pointerSpeed = 0.75;
+      scrollSpeed=0.5;
       naturalScroll = true;
       tapToClick = true;
       tapAndDrag = true;
