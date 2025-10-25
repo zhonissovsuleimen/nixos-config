@@ -7,7 +7,7 @@
   hardware.nvidia = {
     modesetting.enable = true;
 
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     powerManagement.finegrained = false;
     dynamicBoost.enable = true; # might not work first time (need to comment out, nixos-rebuild, uncomment and rebuild again)
 
