@@ -1,31 +1,21 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.plasma = {
     enable = true;
-
-    workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
-      tooltipDelay = 350;
-    };
-
-    session = {
-      sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
-      general.askForConfirmationOnLogout = false;
-    };
-
-    configFile = {
-      plasmarc."OSD".kbdLayoutChangedEnabled = false;
-    };
+    overrideConfig = true;
   };
 
   imports = [
-    ./kwin.nix
-    ./panels.nix
-    ./spectacle.nix
     ./input.nix
-    ./krunner.nix
-    ./powerdevil.nix
     ./kdeglobals.nix
-    ./shortcuts.nix
+    ./krunner.nix
+    ./kwin.nix
+    ./notifications.nix
+    ./panels.nix
+    ./powerdevil.nix
+    ./spectacle.nix
+    ./ui-theme.nix
+    ./other.nix
+    ./other-shortcuts.nix
   ];
 }
