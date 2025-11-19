@@ -3,9 +3,15 @@
 {
   programs.plasma = {
     shortcuts = {
-      "services/org.kde.spectacle.desktop".ActiveWindowScreenShot = "Meta+Print";
       "services/org.kde.spectacle.desktop".CurrentMonitorScreenShot = "Print";
       "services/org.kde.spectacle.desktop".RectangularRegionScreenShot = "Meta+Shift+S";
+
+      "services/org.kde.spectacle.desktop".ActiveWindowScreenShot = [ ];
+      "services/org.kde.spectacle.desktop".FullScreenScreenShot = [ ];
+      "services/org.kde.spectacle.desktop".RecordRegion = [ ];
+      "services/org.kde.spectacle.desktop".RecordScreen = [ ];
+      "services/org.kde.spectacle.desktop".RecordWindow = [ ];
+      "services/org.kde.spectacle.desktop".WindowUnderCursorScreenShot = [ ];
       "services/org.kde.spectacle.desktop"._launch = [ ];
     };
 
