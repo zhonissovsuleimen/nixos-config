@@ -42,7 +42,7 @@
       kwin."Window Quick Tile Left" = "Meta+Left";
       kwin."Window Quick Tile Right" = "Meta+Right";
       kwin."Window Quick Tile Top" = "Meta+Up";
-      kwin.view_zoom_in = "Meta++";
+      kwin.view_zoom_in = "Meta+=";
       kwin.view_zoom_out = "Meta+-";
 
       #disabled
