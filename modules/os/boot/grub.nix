@@ -6,5 +6,6 @@
     device = "nodev";
     default = 0;
     timeoutStyle = "hidden";
+    configurationLimit = 5;
   };
 }
