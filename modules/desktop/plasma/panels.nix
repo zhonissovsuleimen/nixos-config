@@ -10,6 +10,7 @@
           launchers = [
             "applications:firefox.desktop"
             "applications:vesktop.desktop"
+            "applications:steam.desktop"
           ];
 
           behavior.wheel = {
