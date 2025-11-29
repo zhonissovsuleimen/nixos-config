@@ -16,21 +16,26 @@
   };
 
   outputs = { nixpkgs, home-manager, plasma-manager, maccel, ... } @inputs:
+  let
+    modules = import ./modules;
+  in
   {
     nixosConfigurations.sulya-linux = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./nixos
-
+        ./nixos.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.sulya = import ./home;
+          home-manager.users.sulya = { 
+            imports = [ ./home-manager.nix ] ++ modules.hmModules;
+          };
           home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         maccel.nixosModules.default
-      ];
+      ]
+      ++ modules.nixosModules;
     };
   };
 }
