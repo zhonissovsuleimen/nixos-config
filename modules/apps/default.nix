@@ -7,11 +7,12 @@
         lshw
         evtest
         nvtopPackages.nvidia
+        qpwgraph
+        rnnoise-plugin
       ];
 
       programs = {
         steam.enable = true;
-        noisetorch.enable = true;
       };
     })
   ];

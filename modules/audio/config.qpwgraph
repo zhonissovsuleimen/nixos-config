@@ -1,0 +1,38 @@
+<!DOCTYPE patchbay>
+<patchbay name="test1" version="0.9.6">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FR"/>
+   <input node="Steam" port="Steam:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Noise Canceling source" port="Noise Canceling source:monitor_MONO"/>
+   <input node="Chromium input" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC287 Analog:capture_FL"/>
+   <input node="Noise Canceling source" port="Noise Canceling source:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SDL Application" port="SDL Application:output_FL"/>
+   <input node="Steam" port="Steam:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SDL Application" port="SDL Application:output_FR"/>
+   <input node="Steam" port="Steam:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC287 Analog:capture_FR"/>
+   <input node="Noise Canceling source" port="Noise Canceling source:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FL"/>
+   <input node="Steam" port="Steam:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Noise Canceling source" port="Noise Canceling source:monitor_MONO"/>
+   <input node="Chromium input" port="Chromium input:input_FL"/>
+  </item>
+ </items>
+</patchbay>
+

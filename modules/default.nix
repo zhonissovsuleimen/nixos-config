@@ -4,9 +4,9 @@ let
 in
 {
   nixosModules = [
+    ./audio
     ./hardware
     ./os
-    ./audio.nix
     ./maccel.nix
     ./users.nix
   ]
