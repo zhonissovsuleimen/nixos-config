@@ -20,14 +20,13 @@
 
   hmModules = [
     ./vesktop
+    ./alacritty.nix
     ./spicetify.nix
-
     ({ pkgs, ... }: {
       home.packages = with pkgs; [
         firefox
         git
         telegram-desktop
-        alacritty
       ];
     })
   ];
