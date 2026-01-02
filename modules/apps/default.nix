@@ -1,6 +1,7 @@
 {
   nixosModules = [
     ./bash.nix
+    ./nvf.nix
 
     ({ pkgs, ... }: {
       environment.systemPackages = with pkgs; [
@@ -18,8 +19,8 @@
   ];
 
   hmModules = [
-    ./neovim.nix
     ./vesktop
+    ./spicetify.nix
 
     ({ pkgs, ... }: {
       home.packages = with pkgs; [

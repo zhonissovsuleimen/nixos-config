@@ -13,9 +13,11 @@
       inputs.home-manager.follows = "home-manager";
     };
     maccel.url = "github:Gnarus-G/maccel";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nvf.url = "github:NotAShelf/nvf";
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, maccel, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nvf, ... } @inputs:
   let
     modules = import ./modules;
   in
@@ -26,14 +28,20 @@
         ./nixos.nix
         home-manager.nixosModules.home-manager
         {
+          home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.sulya = { 
-            imports = [ ./home-manager.nix ] ++ modules.hmModules;
+            imports = [ 
+              ./home-manager.nix
+              spicetify-nix.homeManagerModules.default
+            ] 
+            ++ modules.hmModules;
           };
           home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         maccel.nixosModules.default
+	nvf.nixosModules.default
       ]
       ++ modules.nixosModules;
     };
