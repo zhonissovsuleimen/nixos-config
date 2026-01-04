@@ -38,6 +38,8 @@
         };
       };
 
+      fzf-lua.enable = true;
+
       git = {
         enable = true;
         gitsigns.enable = true;
@@ -108,6 +110,8 @@
           enable = true;
         };
       };
+
+      syntaxHighlighting = true;
 
       telescope.enable = true;
 
