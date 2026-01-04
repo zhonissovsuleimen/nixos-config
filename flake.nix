@@ -15,9 +15,13 @@
     maccel.url = "github:Gnarus-G/maccel";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nvf.url = "github:NotAShelf/nvf";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nvf, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nvf, rust-overlay, ... } @inputs:
   let
     modules = import ./modules;
   in
@@ -41,7 +45,11 @@
           home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         maccel.nixosModules.default
-	nvf.nixosModules.default
+        nvf.nixosModules.default
+        ({ pkgs, ... }: {
+          nixpkgs.overlays = [ rust-overlay.overlays.default ];
+          environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+        })
       ]
       ++ modules.nixosModules;
     };
