@@ -10,6 +10,7 @@
         nvtopPackages.nvidia
         qpwgraph
         rnnoise-plugin
+        tree
       ];
 
       programs = {
