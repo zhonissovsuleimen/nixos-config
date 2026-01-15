@@ -128,6 +128,11 @@
         style = "dark_high_contrast";
       };
 
+
+      treesitter = {
+        enable = true;
+      };
+
       ui = {
         illuminate.enable = true;
       };
