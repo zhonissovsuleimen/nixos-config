@@ -19,6 +19,8 @@
 
   outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nvf, ... } @inputs:
   let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs { inherit system; };
     modules = import ./modules;
   in
   {
@@ -44,6 +46,10 @@
         nvf.nixosModules.default
       ]
       ++ modules.nixosModules;
+    };
+
+    devShells.${system} = import ./devshells {
+      inherit pkgs;
     };
   };
 }
