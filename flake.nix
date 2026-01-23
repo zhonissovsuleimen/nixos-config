@@ -14,13 +14,19 @@
     };
     maccel.url = "github:Gnarus-G/maccel";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    nvf.url = "github:NotAShelf/nvf";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nvf, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, ... } @inputs:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
+    pkgs = import nixpkgs { 
+      inherit system; 
+      config.allowUnfree = true; 
+    };
     modules = import ./modules;
   in
   {
@@ -43,7 +49,7 @@
           home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
         }
         maccel.nixosModules.default
-        nvf.nixosModules.default
+        nixvim.nixosModules.nixvim
       ]
       ++ modules.nixosModules;
     };

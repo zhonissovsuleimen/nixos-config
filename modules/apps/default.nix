@@ -1,7 +1,7 @@
 {
   nixosModules = [
     ./bash.nix
-    ./nvf.nix
+    ./nixvim
 
     ({ pkgs, ... }: {
       environment.systemPackages = with pkgs; [
