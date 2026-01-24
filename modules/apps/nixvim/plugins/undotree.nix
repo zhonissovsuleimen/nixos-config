@@ -4,10 +4,10 @@
 
   keymaps = lib.mkAfter [
     {
-      key = "<M-t>";
-      action = "<cmd>ToggleTerm<cr>";
-      mode = ["n" "t"];
-      options.desc = "Toggle Terminal";
+      key = "<leader>ut";
+      action = "<cmd>UndotreeToggle<cr>";
+      mode = "n";
+      options.desc = "Toggle Undotree";
     }
   ];
 }
