@@ -19,15 +19,7 @@
 
     servers = {
       bashls.enable = true;
-      clangd = {
-        enable = true;
-        config = {
-          cmd = [
-            "clangd"
-            "-x cuda"
-          ];
-        };
-      };
+      clangd.enable = true;
       rust-analyzer.enable = true;
       nixd.enable = true;
     };
