@@ -1,6 +1,6 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
-  plugins. treesitter = {
+  plugins.treesitter = {
     enable = true;
     highlight.enable = true;
     indent.enable = true;
@@ -13,4 +13,5 @@
       rust
     ];
   };
+
 }

@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   plugins.crates = {
     enable = true;

@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   plugins.illuminate = {
     enable = true;
