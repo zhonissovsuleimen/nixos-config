@@ -4,6 +4,7 @@
     enable = true;
 
     globals.mapleader = " ";
+    globals.rust_recommended_style = 0;
     waylandSupport = true;
 
     opts = {
