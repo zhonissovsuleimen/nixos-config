@@ -16,6 +16,7 @@
       tabstop = 2;
       wrap = false;
 
+      undofile = true;
       timeoutlen = 200;
     };
 
