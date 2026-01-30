@@ -25,6 +25,14 @@
       providers.wl-copy.enable = true;
     };
 
+    autoCmd = [
+    {
+      event = "FileType";
+      pattern = "*";
+      command = "setlocal formatoptions-=o";
+    }
+    ];
+
     plugins = {
       comment.enable = true;
       fidget.enable = true;
