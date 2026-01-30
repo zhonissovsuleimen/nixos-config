@@ -15,6 +15,10 @@
         key = "<M-e>";
         lspBufAction = "hover";
       }
+      {
+        key = "<M-a>";
+        action = "<cmd>lua vim.lsp.buf.code_action()<CR>";
+      }
     ];
 
     servers = {
