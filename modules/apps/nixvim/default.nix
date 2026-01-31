@@ -31,23 +31,7 @@
         pattern = "*";
         command = "setlocal formatoptions-=o";
       }
-      {
-        event = "VimEnter";
-        command = "nnoremap <silent> % <Plug>(MatchitNormalForward)zz";
-      }
     ];
-
-    keymaps = lib.mkAfter [
-      { mode = "n"; key = "n"; action = "nzzzv"; }
-      { mode = "n"; key = "N"; action = "Nzzzv"; }
-
-      { mode = "n"; key = "{"; action = "{zz"; }
-      { mode = "n"; key = "}"; action = "}zz"; }
-
-      { mode = "n"; key = "<C-d>"; action = "<C-d>zz"; }
-      { mode = "n"; key = "<C-u>"; action = "<C-u>zz"; }
-    ];
-
 
     plugins = {
       comment.enable = true;
@@ -72,6 +56,7 @@
       ./plugins/toggleterm.nix
       ./plugins/treesitter.nix
       ./plugins/undotree.nix
+      ./keymaps.nix
     ];
   };
 }
