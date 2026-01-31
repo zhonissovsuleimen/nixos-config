@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, ... }:
 {
   programs.nixvim = {
     enable = true;
@@ -25,12 +25,23 @@
       providers.wl-copy.enable = true;
     };
 
-    autoCmd = [
+    autoCmd = lib.mkAfter [
     {
       event = "FileType";
       pattern = "*";
       command = "setlocal formatoptions-=o";
     }
+    ];
+
+    keymaps = lib.mkAfter [
+      { mode = "n"; key = "n"; action = "nzzzv"; }
+      { mode = "n"; key = "N"; action = "Nzzzv"; }
+
+      { mode = "n"; key = "{"; action = "{zz"; }
+      { mode = "n"; key = "}"; action = "}zz"; }
+
+      { mode = "n"; key = "<C-d>"; action = "<C-d>zz"; }
+      { mode = "n"; key = "<C-u>"; action = "<C-u>zz"; }
     ];
 
     plugins = {
