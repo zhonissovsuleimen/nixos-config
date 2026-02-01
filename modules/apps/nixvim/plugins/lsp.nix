@@ -16,6 +16,10 @@
         lspBufAction = "hover";
       }
       {
+        key = "<M-r>";
+        lspBufAction = "rename";
+      }
+      {
         key = "<M-a>";
         action = "<cmd>lua vim.lsp.buf.code_action()<CR>";
       }
