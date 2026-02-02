@@ -1,41 +1,44 @@
 { lib, ... }:
 {
   keymaps = lib.mkAfter [
-    { key = "n"; action = ":lua custom_zz(\"n\") <CR>"; mode = "n"; options.silent = true; }
-    { key = "N"; action = ":lua custom_zz(\"N\") <CR>"; mode = "n"; options.silent = true; }
+    { key = "n"; action = ":lua custom_zz('n') <CR>"; mode = "n"; options.silent = true; }
+    { key = "N"; action = ":lua custom_zz('N') <CR>"; mode = "n"; options.silent = true; }
 
-    { key = "{"; action = ":lua custom_zz(\"{\") <CR>"; mode = "n"; options.silent = true; }
-    { key = "}"; action = ":lua custom_zz(\"}\") <CR>"; mode = "n"; options.silent = true; }
+    { key = "{"; action = ":lua custom_zz('{') <CR>"; mode = "n"; options.silent = true; }
+    { key = "}"; action = ":lua custom_zz('}') <CR>"; mode = "n"; options.silent = true; }
 
-    { key = "<C-u>"; action = ":lua custom_zz(\"<C-u>\", -999) <CR>"; mode = "n"; options.silent = true; }
-    { key = "<C-d>"; action = ":lua custom_zz(\"<C-d>\", -999) <CR>"; mode = "n"; options.silent = true; }
+    # { key = "<C-U>"; action = ":lua custom_zz('<C-U>', -999) <CR>"; mode = "n"; options.silent = true; }
+    # { key = "<C-D>"; action = ":lua custom_zz('<C-D>', -999) <CR>"; mode = "n"; options.silent = true; }
   ];
 
   # keymaps that are overritten by plugins
   autoCmd = lib.mkAfter [
     {
       event = "VimEnter";
-      command = ''
-        nnoremap <silent> % :lua custom_zz("call matchit#Match_wrapper(''', 1, 'n')") <CR>
-      '';
+      command = "
+        nnoremap <silent> % :lua custom_zz('<Plug>(MatchitNormalForward)') <CR>
+      ";
     }
   ];
 
   extraConfigLua = lib.mkAfter ''
-    _G.custom_zz = function (cmd, margin)
-      local margin = margin or 0
+    _G.custom_zz = function (input, margin)
+      margin = margin or 0
 
       local before_top = vim.fn.line("w0")
       local before_bot = vim.fn.line("w$")
 
-      if type(cmd) == "string" then
-        local split = vim.split(cmd, " ")
-        if #split > 1 and split[1] == "call" then
-          local rest = table.concat(split, " ", 2)
-          vim.cmd("call " .. rest)
-        else
-          vim.cmd("normal! " .. cmd)
-        end
+      local cmd
+      if vim.startswith(input, "<Plug>") then
+        cmd = 'execute "normal \\' .. input .. '"'
+      else
+        cmd = 'normal! ' .. input
+      end
+
+      local ok, err = pcall(vim.cmd, cmd)
+      if not ok then
+        err = err:match("E%d+:%s*(.*)") or err
+        print(err)
       end
 
       local after = vim.api.nvim_win_get_cursor(0)[1]
@@ -52,4 +55,5 @@
       end
     end
   '';
+
 }
