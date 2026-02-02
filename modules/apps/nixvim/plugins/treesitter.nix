@@ -11,6 +11,7 @@
       cuda
       nix
       rust
+      wgsl
     ];
   };
 

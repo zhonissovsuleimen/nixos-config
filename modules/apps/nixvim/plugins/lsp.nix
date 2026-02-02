@@ -28,8 +28,9 @@
     servers = {
       bashls.enable = true;
       clangd.enable = true;
-      rust_analyzer.enable = true;
       nixd.enable = true;
+      rust_analyzer.enable = true;
+      wgsl_analyzer.enable = true;
     };
   };
 }
