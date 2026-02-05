@@ -3,13 +3,15 @@
     enable = true;
 
     settings = {
-      discordBranch = "stable";
-      minimizeToTray = true;
       arRPC = true;
-      hardwareVideoAcceleration = true;
       customTitleBar = true;
-      staticTitle = true;
       disableMinSize = true;
+      discordBranch = "stable";
+      hardwareAcceleration = true;
+      hardwareVideoAcceleration = true;
+      minimizeToTray = true;
+      staticTitle = true;
+      tray = false;
     };
 
     vencord = {
