@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.plasma.panels = [{
     floating = false;
@@ -24,4 +25,16 @@
       "org.kde.plasma.digitalclock"
     ];
   }];
+
+
+  # custom launcher
+  xdg.desktopEntries.steam = {
+    name = "Steam";
+    icon = "steam";
+    exec = "${pkgs.steam}/bin/steam -nofriendsui -nochatui %U";
+    terminal = false;
+
+    categories = [ "Network" "FileTransfer" "Game" ];
+    mimeType = [ "x-scheme-handler/steam" "x-scheme-handler/steamlink" ];
+  };
 }
