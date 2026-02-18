@@ -9,6 +9,12 @@
 
     # { key = "<C-U>"; action = ":lua custom_zz('<C-U>', -999) <CR>"; mode = "n"; options.silent = true; }
     # { key = "<C-D>"; action = ":lua custom_zz('<C-D>', -999) <CR>"; mode = "n"; options.silent = true; }
+
+    {
+      mode = ["n" "i" "v"];
+      key = "<F1>";
+      action = "<Esc>";
+    }
   ];
 
   # keymaps that are overritten by plugins
