@@ -12,6 +12,7 @@
       nix
       rust
       wgsl
+      python
     ];
   };
 

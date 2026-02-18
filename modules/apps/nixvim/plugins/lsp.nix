@@ -31,6 +31,7 @@
       nixd.enable = true;
       rust_analyzer.enable = true;
       wgsl_analyzer.enable = true;
+      basedpyright.enable = true;
     };
   };
 }
