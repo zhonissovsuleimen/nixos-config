@@ -4,6 +4,8 @@
     enable = true;
   };
 
+  dependencies.ripgrep.enable = true;
+
   keymaps = lib.mkAfter [
     {
       key = "<leader>km";
