@@ -13,5 +13,11 @@
       mode = "n";
       options.desc = "Open key maps in Telescope";
     }
+    {
+      key = "<leader>ff";
+      action = "<cmd>Telescope live_grep<cr>";
+      mode = "n";
+      options.desc = "Open live grep in Telescope";
+    }
   ];
 }
