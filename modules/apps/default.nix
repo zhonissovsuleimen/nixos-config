@@ -1,7 +1,7 @@
 {
   nixosModules = [
     ./bash.nix
-    ./mysql.nix
+    ./sql.nix
     ./nixvim
 
     ({ pkgs, ... }: {
