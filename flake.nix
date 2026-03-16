@@ -18,9 +18,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcord.url = "github:FlameFlag/nixcord";
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, nixcord, ... } @inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { 
@@ -43,6 +44,7 @@
             imports = [ 
               ./home-manager.nix
               spicetify-nix.homeManagerModules.default
+              nixcord.homeModules.nixcord
             ] 
             ++ modules.hmModules;
           };

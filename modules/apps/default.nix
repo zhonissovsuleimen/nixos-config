@@ -21,7 +21,7 @@
   ];
 
   hmModules = [
-    ./vesktop
+    ./nixcord
     ./alacritty.nix
     ./spicetify.nix
     ({ pkgs, ... }: {
