@@ -10,7 +10,7 @@
         iconTasks = {
           launchers = [
             "applications:firefox.desktop"
-            "applications:vesktop.desktop"
+            "applications:discord.desktop"
             "applications:steam.desktop"
           ];
 
