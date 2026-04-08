@@ -16,6 +16,7 @@
     ./cmp.nix
     ./colorschemes.nix
     ./crates.nix
+    ./diffview.nix
     ./leetcode.nix
     ./lsp.nix
     ./neo-tree.nix
