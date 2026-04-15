@@ -19,9 +19,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:FlameFlag/nixcord";
+    codex-cli-nix.url = "github:sadjow/codex-cli-nix";
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, nixcord, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, nixcord, codex-cli-nix, ... } @inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { 
