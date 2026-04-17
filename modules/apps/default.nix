@@ -24,6 +24,7 @@
   hmModules = [
     ./nixcord
     ./alacritty.nix
+    ./nushell.nix
     ./spicetify.nix
     ({ pkgs, ... }: {
       home.packages = with pkgs; [
