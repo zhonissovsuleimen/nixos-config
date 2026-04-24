@@ -24,5 +24,14 @@
       gd = "git diff";
       gds = "git diff --staged";
     };
+
+    extraConfig = ''
+      def chess [] { ^setsid -f firefox -foreground -new-window chess.com -new-tab lichess.org/paste; exit }
+      def ff [] { ^setsid -f firefox -foreground; exit }
+      def ffp [] { ^setsid -f firefox -foreground -private-window; exit }
+      def gpt [] { ^setsid -f firefox -foreground -new-window chatgpt.com; exit }
+      def tg [] { ^setsid -f Telegram; exit }
+      def yt [] { ^setsid -f firefox -foreground -new-window youtube.com; exit }
+    '';
   };
 }
