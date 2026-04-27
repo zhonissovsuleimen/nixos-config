@@ -7,7 +7,7 @@
     discord.equicord.enable = true;
 
     config = {
-      autoUpdate = false;
+      autoUpdate = true;
       autoUpdateNotification = false;
       notifyAboutUpdates = false;
     };
