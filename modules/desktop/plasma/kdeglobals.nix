@@ -1,5 +1,38 @@
 {
   programs.plasma = {
+    fonts = {
+      general = {
+        family = "Monocraft";
+        pointSize = 11;
+      };
+
+      fixedWidth = {
+        family = "Monocraft";
+        pointSize = 11;
+        fixedPitch = true;
+      };
+
+      small = {
+        family = "Monocraft";
+        pointSize = 9;
+      };
+
+      toolbar = {
+        family = "Monocraft";
+        pointSize = 10;
+      };
+
+      menu = {
+        family = "Monocraft";
+        pointSize = 10;
+      };
+
+      windowTitle = {
+        family = "Monocraft";
+        pointSize = 10;
+      };
+    };
+
     configFile = {
       kdeglobals.General.TerminalApplication = "alacritty";
       kdeglobals.General.TerminalService = "Alacritty.desktop";
