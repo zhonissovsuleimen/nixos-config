@@ -5,9 +5,10 @@ in
 {
   nixosModules = [
     ./audio
+    ./boot
+    ./drivers
     ./hardware
     ./os
-    ./maccel.nix
     ./users.nix
   ]
   ++ apps.nixosModules
