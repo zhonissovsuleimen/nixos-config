@@ -3,21 +3,8 @@
     ./bash.nix
     ./codex.nix
     ./nixvim
-
-    ({ pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        lshw
-        evtest
-        nvtopPackages.nvidia
-        qpwgraph
-        rnnoise-plugin
-        tree
-      ];
-
-      programs = {
-        steam.enable = true;
-      };
-    })
+    ./terminal-tools.nix
+    ./steam.nix
   ];
 
   hmModules = [

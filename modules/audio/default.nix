@@ -1,5 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
+  environment.systemPackages = with pkgs; lib.mkAfter [
+    qpwgraph
+    rnnoise-plugin
+  ];
+
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
