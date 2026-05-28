@@ -14,7 +14,7 @@
     serviceConfig = {
       Type = "oneshot";
       ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
-      ExecStart = "${pkgs.undervolt}/bin/undervolt -v --core -140 --cache -140";
+      ExecStart = "${pkgs.undervolt}/bin/undervolt -v --core -100 --cache -100";
       TimeoutStartSec = 30;
     };
   };
