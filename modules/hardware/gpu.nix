@@ -1,9 +1,11 @@
-{ config, ... }:
+{ pkgs, lib, config, ... }:
 {
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
+    gsp.enable = true;
+
 
     powerManagement.enable = true;
     powerManagement.finegrained = false;
@@ -20,4 +22,10 @@
 
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
+
+  environment.systemPackages = with pkgs; lib.mkAfter [
+    lact
+  ];
+
+  services.lact.enable = true;
 }
