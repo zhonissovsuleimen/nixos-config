@@ -8,8 +8,9 @@
   ];
 
   hmModules = [
-    ./nixcord
     ./alacritty.nix
+    ./mangohud.nix
+    ./nixcord
     ./nushell.nix
     ./spicetify.nix
     ({ pkgs, ... }: {
@@ -17,6 +18,7 @@
         firefox
         git
         telegram-desktop
+        gamemode
       ];
     })
   ];
