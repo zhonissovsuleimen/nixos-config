@@ -3,21 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager/trunk";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
+    home-manager.url = "github:nix-community/home-manager/master";
+    plasma-manager.url = "github:nix-community/plasma-manager/trunk";
     maccel.url = "github:Gnarus-G/maccel";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
     nixcord.url = "github:FlameFlag/nixcord";
     codex-cli-nix.url = "github:sadjow/codex-cli-nix";
   };

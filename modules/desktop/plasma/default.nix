@@ -16,7 +16,7 @@
     ({ ... }: {
       programs.plasma = {
         enable = true;
-        overrideConfig = true;
+        # overrideConfig = true;
       };
 
       imports = [
