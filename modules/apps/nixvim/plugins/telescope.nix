@@ -4,7 +4,10 @@
     enable = true;
   };
 
-  dependencies.ripgrep.enable = true;
+  dependencies = {
+    ripgrep.enable = true;
+    fd.enable = true;
+  };
 
   keymaps = lib.mkAfter [
     {

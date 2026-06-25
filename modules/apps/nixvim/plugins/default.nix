@@ -2,14 +2,14 @@
   plugins = {
     comment.enable = true;
     fidget.enable = true;
-    gitsings.enable = true;
+    gitsigns.enable = true;
     lsp-format.enable = true;
     lualine.enable = true;
     multicursors.enable = true;
     nvim-autopairs.enable = true;
     scrollview.enable = true;
     vim-surround.enable = true;
-    web-devicons.enable = false;
+    web-devicons.enable = true;
   };
 
   imports = [

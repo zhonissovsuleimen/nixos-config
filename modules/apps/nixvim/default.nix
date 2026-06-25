@@ -17,7 +17,7 @@
       wrap = false;
 
       undofile = true;
-      timeoutlen = 200;
+      timeoutlen = 300;
     };
 
     clipboard = {
