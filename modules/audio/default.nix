@@ -1,4 +1,5 @@
 {
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -8,14 +9,16 @@
     alsa.support32Bit = true;
   };
 
-  services.pulseaudio.enable = false;
-systemd.user.services.pipewire-pulse = {
-  environment = {
-    LADSPA_PATH = "/tmp:/usr/lib64/ladspa:/usr/lib/ladspa:";
+  systemd.user.services.pipewire-pulse = {
+    environment = {
+      LADSPA_PATH = "/tmp:/usr/lib64/ladspa:/usr/lib/ladspa:";
+    };
   };
-};
 
   security.rtkit.enable = true;
 
-  imports = [ ./noisetorch.nix ];
+  imports = [ 
+    ./noisetorch.nix 
+    ./qpwgraph.nix
+  ];
 }
