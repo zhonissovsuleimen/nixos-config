@@ -7,15 +7,15 @@
     undervolt
   ];
 
-  systemd.services.undervolt = {
-    description = "cpu undervolt";
-    after = [ "multi-user.target" "post-resume.target" ];
-    wantedBy = [ "multi-user.target" "post-resume.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
-      ExecStart = "${pkgs.undervolt}/bin/undervolt -v --core -100 --cache -100";
-      TimeoutStartSec = 30;
-    };
-  };
+  # systemd.services.undervolt = {
+  #   description = "cpu undervolt";
+  #   after = [ "multi-user.target" "post-resume.target" ];
+  #   wantedBy = [ "multi-user.target" "post-resume.target" ];
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
+  #     ExecStart = "${pkgs.undervolt}/bin/undervolt -v --core -100 --cache -100";
+  #     TimeoutStartSec = 30;
+  #   };
+  # };
 }
