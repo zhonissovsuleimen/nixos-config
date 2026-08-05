@@ -10,9 +10,10 @@
     nixvim.url = "github:nix-community/nixvim";
     nixcord.url = "github:FlameFlag/nixcord";
     codex-cli-nix.url = "github:sadjow/codex-cli-nix";
+    claude-code-nix.url = "github:sadjow/claude-code-nix";
   };
 
-  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, nixcord, codex-cli-nix, ... } @inputs:
+  outputs = { nixpkgs, home-manager, plasma-manager, maccel, spicetify-nix, nixvim, nixcord, codex-cli-nix, claude-code-nix, ... } @inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { 

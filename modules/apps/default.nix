@@ -1,7 +1,7 @@
 {
   nixosModules = [
     ./bash.nix
-    ./codex.nix
+    ./coding-cli.nix
     ./nixvim
     ./terminal-tools.nix
     ./steam.nix
