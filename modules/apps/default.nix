@@ -5,6 +5,7 @@
     ./nixvim
     ./terminal-tools.nix
     ./steam.nix
+    ./octave.nix
   ];
 
   hmModules = [
