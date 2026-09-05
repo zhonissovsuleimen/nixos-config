@@ -26,12 +26,13 @@
     ];
 
     servers = {
+      basedpyright.enable = true;
       bashls.enable = true;
       clangd.enable = true;
+      matlab_ls.enable = true;
       nixd.enable = true;
       rust_analyzer.enable = true;
       wgsl_analyzer.enable = true;
-      basedpyright.enable = true;
     };
   };
 }

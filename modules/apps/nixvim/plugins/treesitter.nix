@@ -13,10 +13,11 @@
       bash
       cpp
       cuda
+      matlab
       nix
+      python
       rust
       wgsl
-      python
     ];
   };
 
