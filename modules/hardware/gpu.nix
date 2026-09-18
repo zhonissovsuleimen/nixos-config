@@ -1,26 +1,27 @@
 { pkgs, lib, config, ... }:
 {
   hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
-    gsp.enable = true;
-
+    gsp.enable = false;
 
     powerManagement.enable = true;
     powerManagement.finegrained = false;
-    dynamicBoost.enable = true; # might not work first time (need to comment out, nixos-rebuild, uncomment and rebuild again)
+    dynamicBoost.enable = false;
 
     open = false;
     nvidiaSettings = true;
 
     prime = {
-      sync.enable = true;
+      offload.enable = true;
+      offload.enableOffloadCmd = true;
+      sync.enable = false;
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
 
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   environment.systemPackages = with pkgs; lib.mkAfter [
