@@ -1,13 +1,29 @@
 <!DOCTYPE patchbay>
-<patchbay name="config" version="1.0.3">
+<patchbay name="config" version="1.0.4">
  <items>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="The Witcher 3-1" port="The Witcher 3:output_FR"/>
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="Steam" port="Steam:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FR"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-1" port="Firefox:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+   <output node="The Witcher 3" port="The Witcher 3:output_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SDL Application" port="SDL Application:output_FR"/>
+   <input node="Steam" port="Steam:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="Steam-1" port="Steam:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SDL Application" port="SDL Application:output_FL"/>
+   <input node="Steam" port="Steam:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
@@ -22,28 +38,28 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="Steam" port="Steam:input_FL"/>
+   <output node="SDL Application" port="SDL Application:output_FL"/>
+   <input node="discord_capture-1" port="discord_capture:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="SDL Application" port="SDL Application:output_FR"/>
-   <input node="Steam" port="Steam:input_FR"/>
+   <input node="discord_capture-1" port="discord_capture:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="The Witcher 3" port="The Witcher 3:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+   <output node="The Witcher 3-1" port="The Witcher 3:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Firefox-1" port="Firefox:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="SDL Application" port="SDL Application:output_FL"/>
-   <input node="Steam" port="Steam:input_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="Steam-1" port="Steam:input_FL"/>
+   <output node="Noise Canceling source" port="Noise Canceling source:monitor_MONO"/>
+   <input node="Chromium input" port="Chromium input:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Chromium-1" port="Chromium:output_FR"/>
@@ -54,12 +70,32 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SDL Application" port="SDL Application:output_FL"/>
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="SDL Application" port="SDL Application:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Stalcraft" port="Stalcraft:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:monitor_MONO"/>
-   <input node="Chromium input" port="Chromium input:input_FL"/>
+   <output node="SlayTheSpire" port="SlayTheSpire:output_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="Steam-1" port="Steam:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SlayTheSpire" port="SlayTheSpire:output_FR"/>
+   <input node="Steam" port="Steam:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="FMOD Audio" port="FMOD Audio:output_FL"/>
+   <input node="Steam" port="Steam:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="FMOD Audio" port="FMOD Audio:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Firefox-4" port="Firefox:output_FR"/>
@@ -74,32 +110,16 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="Steam-1" port="Steam:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SlayTheSpire" port="SlayTheSpire:output_FR"/>
-   <input node="Steam" port="Steam:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="FMOD Audio" port="FMOD Audio:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="FMOD Audio" port="FMOD Audio:output_FL"/>
+   <output node="SlayTheSpire" port="SlayTheSpire:output_FL"/>
    <input node="Steam" port="Steam:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Stalcraft" port="Stalcraft:output_FL"/>
+   <output node="FMOD Audio" port="FMOD Audio:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SlayTheSpire" port="SlayTheSpire:output_FL"/>
+   <output node="PEAK.exe" port="PEAK.exe:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="SDL Application" port="SDL Application:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="spotify" port="spotify:output_FL"/>
@@ -114,16 +134,40 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="FMOD Audio" port="FMOD Audio:output_FL"/>
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="Chromium input" port="Chromium input:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="gta-vc.exe" port="gta-vc.exe:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PEAK.exe" port="PEAK.exe:output_FL"/>
+   <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="SlayTheSpire" port="SlayTheSpire:output_FL"/>
-   <input node="Steam" port="Steam:input_FL"/>
+   <output node="Built-in Audio Analog Stereo" port="ALC287 Analog:capture_FL"/>
+   <input node="Noise Canceling source" port="Noise Canceling source:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-3" port="Chromium:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Built-in Audio Analog Stereo" port="ALC287 Analog:capture_FR"/>
+   <input node="Noise Canceling source" port="Noise Canceling source:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-3" port="Chromium:output_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="spotify" port="spotify:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="The Witcher 3-1" port="The Witcher 3:output_FL"/>
@@ -142,39 +186,43 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Built-in Audio Analog Stereo" port="ALC287 Analog:capture_FR"/>
-   <input node="Noise Canceling source" port="Noise Canceling source:input_MONO"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FR"/>
+   <output node="Chromium" port="Chromium:output_FR"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="spotify" port="spotify:output_FR"/>
+   <output node="Stalcraft" port="Stalcraft:output_FR"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-3" port="Chromium:output_FL"/>
+   <output node="Firefox-2" port="Firefox:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Firefox-5" port="Firefox:output_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="SDL Application" port="SDL Application:output_FL"/>
+   <input node="Firefox" port="Firefox:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Firefox" port="Firefox:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="cs2" port="cs2:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+   <input node="Steam" port="Steam:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Built-in Audio Analog Stereo" port="ALC287 Analog:capture_FL"/>
-   <input node="Noise Canceling source" port="Noise Canceling source:input_MONO"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-3" port="Chromium:output_FR"/>
+   <output node="PEAK.exe" port="PEAK.exe:output_FR"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="Chromium input" port="Chromium input:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="gta-vc.exe" port="gta-vc.exe:output_FL"/>
+   <output node="Firefox-6" port="Firefox:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
@@ -190,58 +238,6 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-6" port="Firefox:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="cs2" port="cs2:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Red Dead Redemption 2" port="Red Dead Redemption 2:output_FL"/>
-   <input node="Steam" port="Steam:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PEAK.exe" port="PEAK.exe:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Stalcraft" port="Stalcraft:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium" port="Chromium:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-2" port="Firefox:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-5" port="Firefox:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox" port="Firefox:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node=".Telegram-wrapped" port=".Telegram-wrapped:output_FL"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-5" port="Firefox:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="SDL Application" port="SDL Application:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Chromium" port="Chromium:output_FL"/>
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
   </item>
@@ -254,12 +250,24 @@
    <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="Steam" port="Steam:input_FR"/>
+   <output node="Firefox-5" port="Firefox:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-6" port="Firefox:output_FR"/>
-   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="SDL Application" port="SDL Application:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node=".Telegram-wrapped" port=".Telegram-wrapped:output_FL"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
+   <input node="Chromium input-1" port="Chromium input:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FL"/>
@@ -278,8 +286,12 @@
    <input node="Steam" port="Steam:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Firefox-6" port="Firefox:output_FR"/>
+   <input node="Built-in Audio Analog Stereo" port="ALC287 Analog:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="Noise Canceling source" port="Noise Canceling source:capture_MONO"/>
-   <input node="Chromium input-1" port="Chromium input:input_FL"/>
+   <input node="Steam" port="Steam:input_FR"/>
   </item>
  </items>
 </patchbay>
