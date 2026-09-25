@@ -2,10 +2,16 @@
   networking = {
     hostName = "sulya-linux";
 
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi.powersave = false;
+    };
     wireless.enable = true;
   };
 
+  boot.extraModprobeConfig = ''
+    options iwlmvm power_scheme=1
+  '';
   # systemd = {
   #   network = {
   #     enable = true;
