@@ -14,6 +14,7 @@
       gds = "git diff --staged";
 
       #quick launch
+      minecraft = "setsid -f prismlauncher; exit";
       chess = "firefox -foreground -new-window chess.com -new-tab lichess.org/paste & exit";
       ff = "firefox -foreground & exit";
       ffp = "firefox -foreground -private-window & exit";

@@ -27,6 +27,7 @@
     };
 
     extraConfig = ''
+      def minecraft [] { ^setsid -f prismlauncher; exit }
       def chess [] { ^setsid -f firefox -foreground -new-window chess.com -new-tab lichess.org/paste; exit }
       def ff [] { ^setsid -f firefox -foreground; exit }
       def ffp [] { ^setsid -f firefox -foreground -private-window; exit }
