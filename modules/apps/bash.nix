@@ -2,6 +2,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
+      codex = "codex --no-daemon";
+
       #nixos
       nrs = "sudo nixos-rebuild switch --flake ~/.nixos-config/";
       nrt = "sudo nixos-rebuild test --flake ~/.nixos-config/";

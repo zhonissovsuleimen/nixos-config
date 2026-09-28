@@ -18,6 +18,7 @@
     };
 
     shellAliases = {
+      codex = "codex --no-daemon";
       nrs = "sudo nixos-rebuild switch --flake ~/.nixos-config/";
       nrt = "sudo nixos-rebuild test --flake ~/.nixos-config/";
       gs = "git status";
