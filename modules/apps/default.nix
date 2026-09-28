@@ -5,6 +5,7 @@
     ./nixvim
     ./terminal-tools.nix
     ./steam.nix
+    ./minecraft.nix
     ./octave.nix
   ];
 
