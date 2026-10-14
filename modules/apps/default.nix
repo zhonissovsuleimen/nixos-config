@@ -18,7 +18,7 @@
     ({ pkgs, ... }: {
       home.packages = with pkgs; [
         firefox
-        obs-studio
+        (obs-studio.override { cudaSupport = true; })
         git
         telegram-desktop
         gamemode
