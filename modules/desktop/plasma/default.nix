@@ -20,6 +20,7 @@
       };
 
       imports = [
+        ./wallpaper.nix
         ./input.nix
         ./kdeglobals.nix
         ./krunner.nix
