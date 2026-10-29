@@ -9,10 +9,10 @@
     wireless.enable = true;
   };
 
-  boot.extraModprobeConfig = ''
-    options iwlwifi 11n_disable=6
-    options iwlmvm power_scheme=1
-  '';
+  # boot.extraModprobeConfig = ''
+  #   options iwlwifi 11n_disable=6
+  #   options iwlmvm power_scheme=1
+  # '';
   # systemd = {
   #   network = {
   #     enable = true;
