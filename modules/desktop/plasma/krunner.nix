@@ -6,8 +6,6 @@
     };
 
     configFile = {
-      krunnerrc.General.ActivateWhenTypingOnDesktop = false;
-      krunnerrc.General.activateWhenTypingOnDesktop = false;
       krunnerrc.General.historyBehavior = "Disabled";
       krunnerrc.Plugins.browserhistoryEnabled = false;
       krunnerrc.Plugins.browsertabsEnabled = false;

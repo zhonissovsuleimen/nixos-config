@@ -1,8 +1,10 @@
-{ ... }:
+{ config, ... }:
 let
-  wallpaper = ../../../assets/wallpapers/Revachol_Vista.png;
+  wallpaper = "${config.xdg.dataHome}/wallpapers/Revachol_Vista.png";
 in
 {
+  xdg.dataFile."wallpapers/Revachol_Vista.png".source = ../../../assets/wallpapers/Revachol_Vista.png;
+
   programs.plasma.workspace = {
     inherit wallpaper;
     wallpaperFillMode = "preserveAspectCrop";
