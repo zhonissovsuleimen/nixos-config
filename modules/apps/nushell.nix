@@ -6,6 +6,7 @@
     settings = {
       show_banner = false;
     };
+    loadSessionVariables = true;
     environmentVariables = {
       PROMPT_COMMAND = lib.hm.nushell.mkNushellInline ''
         {||
