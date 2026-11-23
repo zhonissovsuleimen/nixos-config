@@ -2,12 +2,14 @@
 {
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
+
   hardware.nvidia = {
     modesetting.enable = true;
     gsp.enable = false;
 
     powerManagement.enable = true;
     powerManagement.finegrained = false;
+    moduleParams.nvidia.NVreg_DynamicPowerManagement = "0x00";
     dynamicBoost.enable = false;
 
     open = false;

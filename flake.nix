@@ -5,7 +5,9 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     plasma-manager.url = "github:nix-community/plasma-manager/trunk";
-    maccel.url = "github:Gnarus-G/maccel";
+    # maccel.url = "github:Gnarus-G/maccel";
+    # temporary replacement maccel
+    maccel.url = "github:chrisheib/maccel/fix/nixos-kernel-module-install";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixvim.url = "github:nix-community/nixvim";
     nixcord.url = "github:FlameFlag/nixcord";
